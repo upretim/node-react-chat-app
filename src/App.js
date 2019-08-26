@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Sidebar from './containers/sidebar';
-import MessageList from './containers/messageList';
-import AddMessage from './containers/addMessage';
+import Sidebar from './components/sidebar';
+import MessageList from './components/messageList';
+import AddMessage from './components/addMessage';
 import './App.css';
 //link to video tutorial https://www.youtube.com/watch?v=x_fHXt9V3zQ
 
