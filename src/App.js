@@ -9,9 +9,9 @@ class App extends Component {
   render (){
     return (
       <div id="container">
-         <Sidebar/>
+         <Sidebar users = {[]}/>
          <section id="main">
-           <MessageList/>
+           <MessageList messages = {[]}/>
            <AddMessage/>
          </section>
       </div>

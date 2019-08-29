@@ -3,24 +3,22 @@ import PropTypes from 'prop-types';
 
 const addMessage = (props)=> {
     let input;
+    
+    const handleKeyPress = (e)=>{
+        console.log(' key code is ', e.keyCode +' key is ', e.key)
+        if(e.key==="Enter"){
+            console.log(' key code is ', e.keyCode +' key is ', e.key)
+            props.dispatch(input.value, 'Manoj');
+            input.value = '';
+
+        }
+    }
     const ref = createRef();
         return(
             <section id="new-message">
-                <input onKeyPress= { (e)=>{
-                    if(e.key==='Enter'){
-                        props.dispatch(input.value, 'Manoj');
-                        input.value = '';
-
-                    }
-                }
-                }
+                <input onKeyPress= { handleKeyPress}
                 type="text"
-                ref = {
-                    (node)=>{
-                    input = node;
-                    }
-                }
-                
+                ref = { (node)=> {input = node;} }               
                 />
             </section>
         )
