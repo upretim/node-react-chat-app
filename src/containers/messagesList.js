@@ -1,10 +1,6 @@
-import {connect} from 'react-redux';
-import MessagesListComponent from './../components/messageList';
+import { connect } from 'react-redux'
+import MessagesListComponent from '../components/MessagesList'
 
-const mapStateToProps = (state)=>{
-    return {
-        messages : state.messages
-    }
-}
-
-export default connect (mapStateToProps, null, null)(MessagesListComponent)
+export const MessagesList = connect(state => ({
+	messages: state.messages
+}), {})(MessagesListComponent)

@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
-import Sidebar from './containers/sidebar';
-import MessageList from './containers/messagesList';
-import AddMessage from './containers/messageContainer';
+import React, { Component } from 'react';
 import './App.css';
-//link to video tutorial https://www.youtube.com/watch?v=x_fHXt9V3zQ
+import { Sidebar } from "./containers/Sidebar"
+import { MessagesList } from "./containers/MessagesList"
+import { AddMessage } from "./containers/AddMessage"
 
 class App extends Component {
-  render (){
+  render() {
     return (
       <div id="container">
-         <Sidebar users = {[]}/>
-         <section id="main">
-           <MessageList messages = {[]}/>
-           <AddMessage/>
-         </section>
+        <Sidebar />
+        <section id="main">
+          <MessagesList />
+          <AddMessage />
+        </section>
       </div>
     );
   }
 }
+
 export default App;

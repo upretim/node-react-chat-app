@@ -1,10 +1,6 @@
-import {connect} from 'react-redux';
-import SidebarComponent from './../components/sidebar';
+import { connect } from 'react-redux'
+import SidebarComponent from '../components/Sidebar'
 
-const mapStateToProps = (state)=>{
-    return {
-        users : state.users
-    }
-}
-
-export default connect (mapStateToProps, null, null)(SidebarComponent)
+export const Sidebar = connect(state => ({
+	users: state.users
+}), {})(SidebarComponent)
